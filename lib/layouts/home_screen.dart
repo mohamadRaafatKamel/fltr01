@@ -94,18 +94,35 @@ class MyButton extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     RaisedButton button = RaisedButton(
-        onPressed: (){},
+        onPressed: (){
+          onClick(context);
+        },
       color: Colors.white,
       child: Text(
         'My Button ',
         style: TextStyle(
             color: Colors.black,
             fontSize: 30,
-            fontFamily: "Birthstone"
+            fontFamily: "Birthstone",
+            fontWeight: FontWeight.bold
         ),
       ),
     );
     return Container(child: button);
+  }
+
+  void onClick (BuildContext context){
+    AlertDialog alertDialog = AlertDialog(
+      title: Text("Clicked"),
+      content: Text("don't click here"),
+    );
+
+    showDialog(
+        context: context,
+        builder: (BuildContext context){
+          return alertDialog;
+        }
+    );
   }
 }
 

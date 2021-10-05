@@ -1,4 +1,5 @@
 import 'package:fltr01/layouts/home_screen.dart';
+import 'package:fltr01/layouts/list.dart';
 import 'package:flutter/material.dart';
 
 
@@ -23,7 +24,9 @@ class MyFlutterApp extends StatelessWidget{
               ),
             ),
           ),
-          body: HomeScreen()
+          body: Scaffold(
+            body: MyList(),
+          )
       ),
     );
   }
