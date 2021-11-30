@@ -2,6 +2,8 @@ import 'package:fltr01/layouts/home_screen.dart';
 import 'package:fltr01/layouts/list.dart';
 import 'package:flutter/material.dart';
 
+import 'layouts/stateful.dart';
+
 
 void main() {
   runApp( MyFlutterApp());
@@ -25,7 +27,7 @@ class MyFlutterApp extends StatelessWidget{
             ),
           ),
           body: Scaffold(
-            body: MyList(),
+            body: MyStateful(),
           )
       ),
     );
